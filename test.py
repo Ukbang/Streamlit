@@ -1,29 +1,10 @@
 import streamlit as st
 
-# 마크다운 문법 지원 X
-st.text("""text : *반갑습니다.* Your Text, Please 사용이 매우,, 간편하지요?""")
 
-# 마크다운 문법 지원 O
-st.write("""write : *반갑습니다.* Your Text, Please 사용이 매우,, 간편하지요?""")
+# 글자에 색 사용하기
 
-# 마크다운 문법 지원 O
-st.markdown("""markdown : *반갑습니다.* Your Text, Please 사용이 매우,, 간편하지요?""")
+st.markdown('원하는 부분에 :red[빨간색] 이라고 표현할 수 있습니다.\n 또한, 다른 색도 가능합니다. 여기는 :blue[파란색]으로도 표현할 수 있고 \n 여기는 :green[초록색]으로도 할 수 있으며 \n 여기서는 :orange[주황색]으로도 표현할 수 있답니다.')
 
-x = 30
-y = 20
+st.write("This is :blue[test]")
 
-st.text(f"""text : 물론 변수도 사용이 가능합니다. x는 {x}, y는 {y}, x+y는 {x+y}이죠""")
-
-# 에러 발생 -> text는 인수를 1개만 받습니다.
-# st.text("x+y : ", x+y)
-
-st.write(f"""write : 물론 변수도 사용이 가능합니다. x는 {x}, y는 {y}, x+y는 {x+y}이죠""")
-
-# write는 변수를 직접 사용할 수 있습니다.
-st.write("x+y : ", x+y)
-
-st.markdown(f"""markdown : 물론 변수도 사용이 가능합니다. x는 {x}, y는 {y}, x+y는 {x+y}이죠""")
-
-# 마크다운은 변수를 직접 사용하지 못합니다.
-st.markdown("x+y", x+y)
-
+https://blog.naver.com/PostView.naver?blogId=hs929kr&logNo=222399156793
