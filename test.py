@@ -1,10 +1,26 @@
+# 수식 사용하기
+
 import streamlit as st
 
+# markdown과 latex를 이용하면 손쉽게 수식을 작성 할 수 있습니다.
 
-# 글자에 색 사용하기
+st.markdown(r"피타고라스의 정리 : $a^2+b^2=c^2$")
+st.latex(r"a^2+b^2=c^2")
 
-st.markdown('원하는 부분에 :red[빨간색] 이라고 표현할 수 있습니다.\n 또한, 다른 색도 가능합니다. 여기는 :blue[파란색]으로도 표현할 수 있고 \n 여기는 :green[초록색]으로도 할 수 있으며 \n 여기서는 :orange[주황색]으로도 표현할 수 있답니다.')
+st.markdown(r"근의 공식: $x = -b \pm \frac{\sqrt{b^2-4ac}}{2a}$")
+st.latex(r"x = -b \pm \frac{\sqrt{b^2-4ac}}{2a}")
 
-st.write("This is :blue[test]")
 
-https://blog.naver.com/PostView.naver?blogId=hs929kr&logNo=222399156793
+# 다음 공식을 작성해볼까요?
+# 시그모이드
+st.markdown(r"$sigmoid(x)=\frac{1}{1+e^{-x}}$")
+st.latex(r"sigmoid(x)=\frac{1}{1+e^{-x}}")
+
+# 코사인 유사도
+st.markdown(r"$cos(\theta)=\frac{A\cdot B}{||{A}|| ||{B}||}$")
+st.latex(r"cos(\theta)=\frac{A\cdot B}{||{A}|| ||{B}||}")
+
+# MSE
+st.markdown(r"$MSE = \frac{1}{N}\sum_{i=1}^N(y_i- \hat{y_i})^2$")
+st.latex(r"MSE = \frac{1}{N}\sum_{i=1}^N(y_i-\hat{y_i})^2")
+
