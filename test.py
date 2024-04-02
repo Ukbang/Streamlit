@@ -2,6 +2,15 @@
 
 import streamlit as st
 
+
+st.set_page_config(
+    page_title="Streamlit 배우기",
+    page_icon="🧡",
+)
+
+with st.sidebar:
+    pass
+
 # markdown과 latex를 이용하면 손쉽게 수식을 작성 할 수 있습니다.
 
 st.markdown(r"피타고라스의 정리 : $a^2+b^2=c^2$")
