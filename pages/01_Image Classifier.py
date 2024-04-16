@@ -8,6 +8,8 @@ from tensorflow.keras.preprocessing import image
 from googletrans import Translator
 import koreanize_matplotlib
 import matplotlib.pyplot as plt
+import warnings
+warnings.filterwarnings("ignore")
 
 st.set_page_config(layout="wide")
 
@@ -22,6 +24,7 @@ translator = Translator()
 
 with st.sidebar:
     upload_img = st.file_uploader("Upload Your File...")
+    n = st.slider(label="Count of Probablity Predict", min_value=1, max_value=10, step=1)
 
 try:
     if upload_img:
@@ -33,7 +36,7 @@ try:
 
         predictions = model.predict(x)
         
-        pred_label = decode_predictions(predictions, top=3)[0]
+        pred_label = decode_predictions(predictions, top=n)[0]
         label_df = pd.DataFrame(pred_label)
         del label_df[0]
 
