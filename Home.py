@@ -16,17 +16,18 @@ st.write("""
 
 # 로또 번호 추첨기
 
-import streamlit as st
-import random
+import numpy as np
 
-# @st.cache_resource(show_spinner="Loading...")  # 결과를 캐시하기 위해 데코레이터를 사용합니다.
-# def generate_lotto_numbers():
-#     return sorted(random.sample(range(1, 46), 6))
+col1, col2, col3 = st.columns(3)
 
-# st.title('로또 번호 생성기')
+lotto_number = list(range(1,46))
 
-# if st.button('번호 생성'):
-#     lotto_numbers = generate_lotto_numbers()
-#     st.write(f'생성된 로또 번호: {lotto_numbers}')
-# else:
-#     st.write('번호를 생성하려면 아래 버튼을 클릭하세요.')
+winning_number = []
+
+button = col3.button("로또 번호를 뽑아보세요.")
+
+if button:
+    winning_number.append(np.random.choice(lotto_number))
+
+col1.write(lotto_number)
+col2.write(winning_number)
