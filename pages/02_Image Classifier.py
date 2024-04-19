@@ -59,4 +59,4 @@ try:
     else:
         pass
 except:
-    st.write("일시적인 오류입니다. 다시 업로드해주세요.")
+    st.error("일시적인 오류입니다. 다시 업로드해주세요.")
