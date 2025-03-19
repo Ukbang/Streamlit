@@ -49,7 +49,7 @@ try:
         col1.write(f'이 사진은 **{label_df[1][0]}** 입니다.')
 
         # 파이 차트 생성
-        plt.figure(figsize=(18, 18))  # 차트의 크기 설정
+        plt.figure(figsize=(36, 36))  # 차트의 크기 설정
         plt.title("레이블 당 확률", fontsize=48)
         plt.pie(label_df[2], labels=label_df[1], autopct='%1.1f%%', shadow=True, textprops={"fontsize":36})
         plt.legend(fontsize=30, bbox_to_anchor=(1.3,1.3))
